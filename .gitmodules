@@ -1,3 +1,6 @@
 [submodule "CppUtils"]
 	path = src/CppUtils
 	url = https://github.com/talex-tnt/CppUtils.git
+[submodule "src/CppUtils"]
+	path = src/CppUtils
+	url = https://github.com/talex-tnt/CppUtils.git
