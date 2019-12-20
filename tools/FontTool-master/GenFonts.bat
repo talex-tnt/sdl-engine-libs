@@ -1,0 +1,1 @@
+python .\FontTool.py -f .\fonts\unifont --headless -o out

@@ -1,0 +1,4 @@
+Original script comes from:
+https://github.com/doches/FontTool
+
+https://www.dafont.com/invaders-from-space.font

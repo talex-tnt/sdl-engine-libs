@@ -1,22 +1,22 @@
-set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+cmake_minimum_required(VERSION 3.7)
 
-add_subdirectory(Graphics)
-add_subdirectory(SDLSupport)
-add_subdirectory(AppEvents)
-add_subdirectory(GameGraphics)
-add_subdirectory(SpaceInvadersEngine)
-add_subdirectory(Math)
-add_subdirectory(AppUtils)
-add_subdirectory(CppUtils/code)
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set (CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH};${CMAKE_CURRENT_SOURCE_DIR}/scripts/cmake")
 
+include(utils)
+get_folder_name(FOLDER_NAME)
+project (${FOLDER_NAME} LANGUAGES CXX)
 
+if(MSVC)
+    LIST(APPEND SO_LIBRARIES
+        winmm
+    )
+endif()
 
-set_target_properties (SDLSupport PROPERTIES FOLDER libs)
-set_target_properties (cpp-utils-h PROPERTIES FOLDER libs)
-set_target_properties (Graphics PROPERTIES FOLDER libs)
-set_target_properties (GameGraphics PROPERTIES FOLDER libs)
-set_target_properties (AppUtils PROPERTIES FOLDER libs)
-set_target_properties (AppEvents-h PROPERTIES FOLDER libs)
-set_target_properties (Math PROPERTIES FOLDER libs)
-set_target_properties (SpaceInvadersEngine PROPERTIES FOLDER libs)
+add_subdirectory(src)
 
+set(TARGET_NAME SpaceInvadersEngine)
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${TARGET_NAME})
+set_property(TARGET ${TARGET_NAME} PROPERTY VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/app")
