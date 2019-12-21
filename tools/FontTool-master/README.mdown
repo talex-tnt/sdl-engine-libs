@@ -1,3 +1,7 @@
+Credits to https://github.com/doches
+
+Original repo: https://github.com/doches/FontTool
+
 ### FontTool.py
 
 FontTool.py is a tool for creating textures and textures atlases from TrueType font files. 
