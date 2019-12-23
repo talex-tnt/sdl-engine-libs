@@ -18,7 +18,7 @@ namespace graphics
 class SpriteAtlasMgr : public SpriteAtlasProvider
 {
 public:
-	SpriteAtlasMgr::SpriteAtlasMgr(TextureMgr& i_textureMgr)
+	SpriteAtlasMgr(TextureMgr& i_textureMgr)
 		: SpriteAtlasProvider(i_textureMgr) { }
 	using SpriteAtlasProvider::LoadSpriteAtlas;
 	using SpriteAtlasProvider::LoadSpriteAtlases;
@@ -27,8 +27,8 @@ public:
 }
 
 SDLEngine::SDLEngine(const std::string& i_windowTitle, std::int32_t i_width, std::int32_t i_height)
-	: m_isRunning(sdl::policy::Initialization::Init(i_windowTitle, i_width, i_height))
-	, m_input{ false, false, false }
+	: m_input{ false, false, false }
+	, m_isRunning(sdl::policy::Initialization::Init(i_windowTitle, i_width, i_height))
 {
 	m_timer.Reset();
 

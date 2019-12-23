@@ -35,7 +35,7 @@ protected:
 	public:
 		using game::graphics::SpriteAtlas::Load;
 
-		InternalSpriteAtlas::InternalSpriteAtlas() = default;
+		InternalSpriteAtlas() = default;
 		InternalSpriteAtlas(const SpriteAtlas&) = delete;
 		InternalSpriteAtlas(InternalSpriteAtlas&&) = delete;
 

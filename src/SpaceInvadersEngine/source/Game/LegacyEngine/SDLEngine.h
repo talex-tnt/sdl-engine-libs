@@ -36,7 +36,7 @@ public:
 	struct Input
 	{
 		bool space, left, right, up, down;
-	} m_input;
+	};
 
 public:
 	using RendererT = game::graphics::Renderer2D;
@@ -70,7 +70,7 @@ private:
 	std::unique_ptr<TextRendererT> m_textRenderer;
 	std::unique_ptr<SpriteRendererT> m_spriteRenderer;
 	sdl::Timer m_timer;
-
+	Input m_input;
 	bool m_isRunning;
 };
 

@@ -32,7 +32,7 @@ public:
 
 protected:
 	TextureId CreateTexture(const std::string& i_path);
-	void TextureProvider::CreateTextures(const std::vector<std::string>& i_paths);
+	void CreateTextures(const std::vector<std::string>& i_paths);
 
 public:
 	using Texture = sdl::Texture;
