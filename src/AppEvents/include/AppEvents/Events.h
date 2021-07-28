@@ -1,6 +1,7 @@
 #pragma once
 #include <memory>
 #include <string>
+#include <iostream>
 #include <AppUtils/Enum.h>
 
 namespace app
@@ -26,9 +27,9 @@ public:
 		k_up, k_down
 	};
 
-	KeyEvent(KeycodeType i_keycode, EventState i_state) 
-		: m_keycode(i_keycode) 
-		, m_state(i_state) 
+	KeyEvent(KeycodeType i_keycode, EventState i_state)
+		: m_keycode(i_keycode)
+		, m_state(i_state)
 	{ }
 	KeycodeType GetKeycode() const { return m_keycode; }
 	EventState GetState() const { return m_state; }
