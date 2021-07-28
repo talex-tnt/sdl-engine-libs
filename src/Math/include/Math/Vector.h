@@ -123,61 +123,61 @@ public:
 	template<class NewT>
 	explicit operator V<NewT, Dim>() const;
 
-	template <template<class, std::size_t> class V, class T, std::size_t N>
+	template <template<class, std::size_t> class Vec, class Type, std::size_t N>
 	friend std::ostream& operator<<(std::ostream& o_stream, const VectorT& i_vec);
-	
-	template <template<class, std::size_t> class V, class T, std::size_t N>
+
+	template <template<class, std::size_t> class Vec, class Type, std::size_t N>
 	friend std::istream& operator>>(std::istream& i_stream, VectorT& i_vec);
 
-	template <template<class, std::size_t> class V, class T, std::size_t N>
+	template <template<class, std::size_t> class Vec, class Type, std::size_t N>
 	friend VectorT operator+ (const VectorT& lhs, const VectorT& rhs);
 
-	template <template<class, std::size_t> class V, class T, std::size_t N>
-	friend VectorT operator+ (const T (&lhs)[N], const VectorT& rhs);
+	template <template<class, std::size_t> class Vec, class Type, std::size_t N>
+	friend VectorT operator+ (const Type (&lhs)[N], const VectorT& rhs);
 
-	template <template<class, std::size_t> class V, class T, std::size_t N>
-	friend VectorT operator+ (const VectorT& rhs, const T& v);
+	template <template<class, std::size_t> class Vec, class Type, std::size_t N>
+	friend VectorT operator+ (const VectorT& rhs, const Type& v);
 
-	template <template<class, std::size_t> class V, class T, std::size_t N>
+	template <template<class, std::size_t> class Vec, class Type, std::size_t N>
 	friend VectorT operator- (const VectorT& lhs, const VectorT& rhs);
 
-	template <template<class, std::size_t> class V, class T, std::size_t N>
-	friend VectorT operator- (const T(&lhs)[ N ], const VectorT& rhs);
+	template <template<class, std::size_t> class Vec, class Type, std::size_t N>
+	friend VectorT operator- (const Type(&lhs)[ N ], const VectorT& rhs);
 
-	template <template<class, std::size_t> class V, class T, std::size_t N>
-	friend VectorT operator- (const VectorT& rhs, const T& v);
+	template <template<class, std::size_t> class Vec, class Type, std::size_t N>
+	friend VectorT operator- (const VectorT& rhs, const Type& v);
 
-	template <template<class, std::size_t> class V, class T, std::size_t N>
+	template <template<class, std::size_t> class Vec, class Type, std::size_t N>
 	friend VectorT operator* (const VectorT& lhs, const VectorT& rhs);
 
-	template <template<class, std::size_t> class V, class T, std::size_t N>
-	friend VectorT operator* (const T(&lhs)[ N ], const VectorT& rhs);
+	template <template<class, std::size_t> class Vec, class Type, std::size_t N>
+	friend VectorT operator* (const Type(&lhs)[ N ], const VectorT& rhs);
 
-	template <template<class, std::size_t> class V, class T, std::size_t N>
-	friend VectorT operator* (const VectorT& rhs, const T& v);
+	template <template<class, std::size_t> class Vec, class Type, std::size_t N>
+	friend VectorT operator* (const VectorT& rhs, const Type& v);
 
-	template <template<class, std::size_t> class V, class T, std::size_t N>
-	friend VectorT operator/ (const T& v, const VectorT& rhs);
+	template <template<class, std::size_t> class Vec, class Type, std::size_t N>
+	friend VectorT operator/ (const Type& v, const VectorT& rhs);
 
-	template <template<class, std::size_t> class V, class T, std::size_t N>
+	template <template<class, std::size_t> class Vec, class Type, std::size_t N>
 	friend VectorT operator/ (const VectorT& lhs, const VectorT& rhs);
 
-	template <template<class, std::size_t> class V, class T, std::size_t N>
-	friend VectorT operator/ (const T(&lhs)[ N ], const VectorT& rhs);
+	template <template<class, std::size_t> class Vec, class Type, std::size_t N>
+	friend VectorT operator/ (const Type(&lhs)[ N ], const VectorT& rhs);
 
-	template <template<class, std::size_t> class V, class T, std::size_t N>
-	friend VectorT operator/ (const VectorT& rhs, const T& v);
+	template <template<class, std::size_t> class Vec, class Type, std::size_t N>
+	friend VectorT operator/ (const VectorT& rhs, const Type& v);
 
-	template <template<class, std::size_t> class V, class T, std::size_t N>
+	template <template<class, std::size_t> class Vec, class Type, std::size_t N>
 	friend bool operator<= (const VectorT& lhs, const VectorT& rhs);
 
-	template <template<class, std::size_t> class V, class T, std::size_t N>
+	template <template<class, std::size_t> class Vec, class Type, std::size_t N>
 	friend bool operator>= (const VectorT& lhs, const VectorT& rhs);
 
-	template <template<class, std::size_t> class V, class T, std::size_t N>
+	template <template<class, std::size_t> class Vec, class Type, std::size_t N>
 	friend bool operator< (const VectorT& lhs, const VectorT& rhs);
 
-	template <template<class, std::size_t> class V, class T, std::size_t N>
+	template <template<class, std::size_t> class Vec, class Type, std::size_t N>
 	friend bool operator> (const VectorT& lhs, const VectorT& rhs);
 
 private:
