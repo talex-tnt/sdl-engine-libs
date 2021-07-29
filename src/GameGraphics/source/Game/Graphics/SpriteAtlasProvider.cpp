@@ -1,5 +1,5 @@
 #include <Game/Graphics/SpriteAtlasProvider.h>
-
+#include <vector>
 
 namespace game
 {

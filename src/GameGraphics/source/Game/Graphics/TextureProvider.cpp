@@ -2,7 +2,7 @@
 #include <SDL/TextureFactory.h>
 #include <SDL/Texture.h>
 #include <assert.h>
-
+#include <vector>
 
 namespace game
 {

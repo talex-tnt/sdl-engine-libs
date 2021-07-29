@@ -277,13 +277,13 @@ inline bool Math::VectorBase<V, T, Dim>::greater(const VectorBaseT& rhs) const
 	return apply_operator<std::greater<T>>(rhs);
 }
 
-template <template<class, std::size_t> class V, class T, std::size_t Dim>
-inline typename Math::VectorBase<V, T, Dim>::VectorT Math::VectorBase<V, T, Dim>::abs() const
-{
-	VectorT r;
-	std::transform(cbegin(), cend(), r.begin(), details::abs<T>());
-	return r;
-}
+// template <template<class, std::size_t> class V, class T, std::size_t Dim>
+// inline typename Math::VectorBase<V, T, Dim>::VectorT Math::VectorBase<V, T, Dim>::abs() const
+// {
+// 	VectorT r;
+// 	std::transform(cbegin(), cend(), r.begin(), details::abs<T>());
+// 	return r;
+// }
 
 template <template<class, std::size_t> class V, class T, std::size_t Dim>
 template<class OperatorT>
