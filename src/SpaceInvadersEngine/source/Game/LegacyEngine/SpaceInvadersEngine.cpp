@@ -10,7 +10,13 @@
 #include "../Base/Assets/Sprites.h"
 #include <AppUtils/Enum.h>
 
-SpaceInvadersEngine::SpaceInvadersEngine() 
+const std::size_t SpaceInvadersEngine::CanvasWidth   = 640;
+const std::size_t SpaceInvadersEngine::CanvasHeight  = 480;
+const std::size_t SpaceInvadersEngine::SpriteSize    = 32;
+const std::size_t SpaceInvadersEngine::FontWidth     = 8;
+const std::size_t SpaceInvadersEngine::FontRowHeight = 18;
+
+SpaceInvadersEngine::SpaceInvadersEngine()
 	: m_engine(std::make_unique<SDLEngine>("Space Invaders", CanvasWidth, CanvasHeight))
 {
 	using Sprites = game::assets::Sprites;
@@ -26,12 +32,12 @@ SpaceInvadersEngine::~SpaceInvadersEngine()
 {
 }
 
-bool SpaceInvadersEngine::Run() 
+bool SpaceInvadersEngine::Run()
 {
 	return m_engine->Run();
 }
 
-void SpaceInvadersEngine::RenderSprite(Sprite sprite, int x, int y) const 
+void SpaceInvadersEngine::RenderSprite(Sprite sprite, int x, int y) const
 {
 	using Rect = game::graphics::SpriteRenderer::Rect;
 	using Enum = app::utils::Enum;
@@ -43,7 +49,7 @@ void SpaceInvadersEngine::RenderSprite(Sprite sprite, int x, int y) const
 		const float ratio = spr.m_rect.size.x() / spr.m_rect.size.y();
 		spriteSize[0] *= ratio;
 		pos[0] += (SpriteSize - spriteSize[0]) * 0.5f;
-	} 
+	}
 	else
 	{
 		const float ratio = spr.m_rect.size.y() / spr.m_rect.size.x();

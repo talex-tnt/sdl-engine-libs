@@ -5,14 +5,14 @@
 #include <Game/Graphics/SpriteAtlasProvider.h>
 
 class SDLEngine;
-struct SpaceInvadersEngine 
+struct SpaceInvadersEngine
 {
-	static const int CanvasWidth   = 640;
-	static const int CanvasHeight  = 480;
-	static const int SpriteSize    = 32;
-	static const int FontWidth     = 8;
-	static const int FontRowHeight = 18;
-	
+	static const std::size_t CanvasWidth;
+	static const std::size_t CanvasHeight;
+	static const std::size_t SpriteSize;
+	static const std::size_t FontWidth;
+	static const std::size_t FontRowHeight;
+
 	struct PlayerInput
 	{
 		bool fire, left, right;
@@ -45,4 +45,3 @@ private:
 	std::unique_ptr<SDLEngine> m_engine;
 	std::array<SpriteT, 5> m_sprites;
 };
-
